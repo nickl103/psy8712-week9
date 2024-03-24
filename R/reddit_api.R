@@ -35,7 +35,7 @@ df <-rstats_cor$parameter
 was <- ifelse(p.value < .05, "was","was not")
 
 #creating the message using sprintf because it returns a character vector
-text <- sprintf("The correlation between upvotes and comments was r(%d) = %s, p = %s. This test %s statistically significant.",df, cor, p.value, was)
+text <- sprintf("The correlation between upvotes and comments was r(%d) = %s,p = %s. This test %s statistically significant.",df, cor, p.value, was)
 cat(text)
 #used the cat function to print the text out. 
 
