@@ -25,9 +25,17 @@ cor
 p.value <- str_remove(formatC(rstats_cor$p.value, format="f", digits=2), "^0")
 p.value
 #called p.value for later use in publication
-rstats_cor$parameter
+df <-rstats_cor$parameter
 #called df using parameter for later use in publication
 
 # Publication
+#The correlation between upvotes and comments was r(<df>) = <cor>, p = <p>. This test <was/was not> statistically 
 
-  
+#creating an ifelse test for was/was not if p.value is significant 
+was <- ifelse(p.value < .05, "was","was not")
+
+#creating the message using sprintf because it returns a character vector
+text <- sprintf("The correlation between upvotes and comments was r(%d) = %s, p = %s. This test %s statistically significant.",df, cor, p.value, was)
+cat(text)
+#used the cat function to print the text out. 
+
