@@ -21,7 +21,7 @@ rstats_cor <- cor.test(rstats_tbl$upvotes,rstats_tbl$comments)
 #ran correlation test as suggested by instructions
 cor <- str_remove(formatC(rstats_cor$estimate, format="f", digits=2), "^0")
 cor
-#called correlation estimate for later use in publication
+#called correlation estimate for later use in publication, using code from last week to remove leading zeros and only displaying two decimals. 
 p.value <- str_remove(formatC(rstats_cor$p.value, format="f", digits=2), "^0")
 p.value
 #called p.value for later use in publication
