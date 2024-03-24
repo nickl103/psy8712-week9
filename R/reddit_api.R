@@ -19,6 +19,12 @@ rstats_tbl %>% ggplot(aes(upvotes,comments)) +
 # Analysis
 rstats_cor <- cor.test(rstats_tbl$upvotes,rstats_tbl$comments)
 #ran correlation test as suggested by instructions
+rstats_cor$estimate
+#called correlation estimate for later use in publication
+rstats_cor$p.value
+#called p.value for later use in publication
+rstats_cor$parameter
+#called df using parameter for later use in publication
 
 # Publication
 
