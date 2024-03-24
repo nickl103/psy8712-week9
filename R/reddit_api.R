@@ -10,3 +10,9 @@ thread <- get_thread_content(urls$url) #using get_thread_urls to create datafram
 rstats_tbl <- tibble(post= thread$threads$title,
                      upvotes = thread$threads$upvotes,
                      comments= thread$threads$comments)
+# Visualization
+#made scatterplot because it's two continuous variables 
+rstats_tbl %>% ggplot(aes(upvotes,comments)) +
+  geom_point(color="lightpink") +
+  labs(title= "Scatterplot of Upvotes and Comments")
+  
