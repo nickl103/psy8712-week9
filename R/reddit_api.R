@@ -15,4 +15,11 @@ rstats_tbl <- tibble(post= thread$threads$title,
 rstats_tbl %>% ggplot(aes(upvotes,comments)) +
   geom_point(color="lightpink") +
   labs(title= "Scatterplot of Upvotes and Comments")
+
+# Analysis
+rstats_cor <- cor.test(rstats_tbl$upvotes,rstats_tbl$comments)
+#ran correlation test as suggested by instructions
+
+# Publication
+
   
